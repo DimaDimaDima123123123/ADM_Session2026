@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LinkUp — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="layout">
+
+<header class="app-top">
+  <div class="appbar">
+    <div class="inner">
+            <a class="logo" href="home.html"><img src="img/Frame 15922.svg" alt=""></a>
+
+      <div class="search">
+        <input type="text" placeholder="Search">
+      </div>
+
+      <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav">
+
+  <a href="home.html" class="nav-item active">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15417.svg" alt="Home">
+    </div>
+  </a>
+
+  <a href="network.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15420.svg" alt="Network">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15428.svg" alt="Vacancies">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15426.svg" alt="Messages">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15430.svg" alt="Notifications">
+    </div>
+  </a>
+
+</nav>
+
+
+</nav>
+
+      <div class="avatar">
+        <div class="pic"><img src="img/man.svg" alt=""></div>
+        <span style="font-size:11px; opacity:.95;">My Profile</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="app">
+  <div class="grid-3">
+
+    <aside class="panel profile-card">
+      <div class="p-avatar"><img src="img/man.svg" alt=""></div>
+      <div class="name">Nathaniel Evans</div>
+      <div class="role">Junior UI/UX Designer · Microsoft</div>
+
+      <div class="profile-links">
+        <div style="font-weight:700; margin-top:6px;">Contacts</div>
+        <div style="font-size:10px; color:#777; margin-top:4px;">Expand your network of contacts</div>
+        <img src="img/saved elements.svg" alt="">
+      </div>
+    </aside>
+
+    <section>
+      <div class="panel create-post" id="createPost">
+
+        <div id="feed"></div>
+
+  <div class="row">
+    <div class="mini-avatar">
+      <img src="img/man.svg" alt="" style="width: 27px;">
+    </div>
+
+    <input
+      type="text"
+      class="start-input"
+      id="postTrigger"
+      placeholder="Start your post"
+      readonly
+    >
+  </div>
+
+  <div class="expand-area" id="expandArea">
+
+    <textarea
+      id="postTextarea"
+      class="post-textarea"
+      placeholder="What do you want to talk about?"
+    ></textarea>
+
+    <div class="post-bottom">
+      <div class="post-tools">
+        <span>☺</span>
+        <span>☆</span>
+      </div>
+
+      <button class="publish-btn" id="publishBtn" disabled>
+        Publish
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+
+      <article class="panel post">
+        <div class="post-head">
+          <div class="mini-avatar">
+            <img src="img/man2.svg" alt="">
+          </div>
+          <div class="meta">
+            <div class="who">Christian Nolan</div>
+            <div class="job">Junior UI/UX Designer · Microsoft</div>
+          </div>
+        </div>
+
+        <div class="post-body">
+          “The dumbest mistake is viewing design as something you do at the end of the process to tidy up...”  
+          <div style="margin-top:6px; color:#777; font-size:10px;">— Tom Peterson</div>
+        </div>
+
+        <div class="post-img">
+          <img src="img/image 15.svg" alt="">
+        </div>
+
+        <div class="post-actions">
+          <div class="i1"><img src="img/Component 24.svg" alt=""></div>
+          <div class="i2"><img src="img/Component 25.svg" alt=""></div>
+          <div class="i3"><img src="img/Component 26.svg" alt=""></div>
+          <div class="i4"><img src="img/Component 27.svg" alt=""></div>
+        </div>
+      </article>
+
+      <article class="panel post">
+        <div class="post-head">
+          <div class="mini-avatar">
+<img src="img/handsome-smiling-model-sexy-stylish-man-dressed-black-turtleneck-sweater-jeans-fashion-hipster-male-posing-near-blue-wall-studio-isolated.svg" alt="">
+          </div>
+
+          <div class="meta">
+            <div class="who">Jonathan Matthews</div>
+            <div class="job">UI/UX Designer · Ryanair</div>
+          </div>
+        </div>
+
+        <div class="post-body">
+          Users will tell you what they think you want to hear. Users will tell you what they think sounds good...
+        </div>
+
+        <div class="post-img">
+          <img src="img/image 20.svg" alt="">
+        </div>
+
+        <div class="post-actions">
+          <div class="i1"><img src="img/Component 24.svg" alt=""></div>
+          <div class="i2"><img src="img/Component 25.svg" alt=""></div>
+          <div class="i3"><img src="img/Component 26.svg" alt=""></div>
+          <div class="i4"><img src="img/Component 27.svg" alt=""></div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="panel">
+      <div class="messages-top">
+        <div class="title"><h3>Messages</h3></div>
+        <div class="ico-messages">
+
+        <div><img src="img/Fether icons/more-horizontal.svg" alt=""></div>
+        <div><img src="img/Fether icons/edit.svg" alt=""></div>
+        <div><img src="img/CaretCircleDown.svg" alt=""></div>
+
+      </div>
+      </div>
+
+  <div class="msg-search-row">
+    <div class="msg-search">
+      <input type="text" placeholder="Search messages">
+    </div>
+
+    <button class="msg-filter" type="button" aria-label="Filters" title="Filters">
+
+      <img src="img/Phosphor icons/Sliders.svg" alt="" style="width: 20px;">
+    </button>
+  </div>
+
+<input class="msg-radio" type="radio" name="msgtab" id="tabSorted" checked>
+<input class="msg-radio" type="radio" name="msgtab" id="tabOther">
+
+<div class="msg-tabs">
+  <label class="tab" for="tabSorted">Sorted</label>
+  <label class="tab" for="tabOther">Other</label>
+  <div class="tab-line"></div>
+</div>
+
+
+      <div class="empty-mail">
+        <div>
+            <img src="img/Mail_Illustration.svg" alt="">
+          <div style="font-weight:700; margin-bottom:6px;">No messages yet</div>
+          <div>Contact a member and start a discussion</div>
+          <button class="msg-btn" style="width:160px; margin-top:10px;">Send a message</button>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">General information</div>
+          <div class="ai"><a href="#" >Careers</a></div>
+          <div class="ai"><a href="#">Ad Settings</a></div>
+          <div class="ai"><a href="#" class="ai">Security Center</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Accessibility</div>
+          <div class="ai"><a href="#" class="ai">Privacy and Terms</a></div>
+          <div class="ai"><a href="#" class="ai">Mobile Phone</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Policies for the Professional Community</div>
+          <div class="ai"><a href="#" class="ai">Sales Solutions</a></div>
+          <div class="ai"><a href="#" class="ai">Advertising Solutions</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Questions?</div>
+          <div class="ai"><a href="#" class="ai">Visit our Help Center</a></div>
+          <div class="ai"><a href="#" class="ai">Manage Account and Privacy</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
