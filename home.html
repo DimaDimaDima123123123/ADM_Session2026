@@ -188,7 +188,10 @@
         <div class="title"><h3>Messages</h3></div>
         <div class="ico-messages">
 
-        <div><img src="img/Fether icons/more-horizontal.svg" alt=""></div>
+     <button class="msg-dots" id="openMsgMenu" type="button">
+  <img src="img/Fether icons/more-horizontal.svg" alt="">
+</button>
+
         <div><img src="img/Fether icons/edit.svg" alt=""></div>
         <div><img src="img/CaretCircleDown.svg" alt=""></div>
 
@@ -200,9 +203,9 @@
       <input type="text" placeholder="Search messages">
     </div>
 
-    <button class="msg-filter" type="button" aria-label="Filters" title="Filters">
+<button class="msg-filter" id="openMsgFilters" type="button" aria-label="Filters" title="Filters">
+  <img src="img/Phosphor icons/Sliders.svg" alt="" style="width:20px;">
 
-      <img src="img/Phosphor icons/Sliders.svg" alt="" style="width: 20px;">
     </button>
   </div>
 
@@ -221,7 +224,7 @@
             <img src="img/Mail_Illustration.svg" alt="">
           <div style="font-weight:700; margin-bottom:6px;">No messages yet</div>
           <div>Contact a member and start a discussion</div>
-          <button class="msg-btn" style="width:160px; margin-top:10px;">Send a message</button>
+          <button class="msg-btn" id="openNewMessage">Send a message</button>
         </div>
       </div>
     </aside>
@@ -258,6 +261,63 @@
   </footer>
 
   <script src="app.js"></script>
+
+<div id="uiOverlay" class="ui-overlay"></div>
+
+<div id="newMessageModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div class="modal-title">New message</div>
+      <button class="modal-close" id="closeNewMessage" type="button">✕</button>
+    </div>
+
+    <input class="modal-input" type="text" placeholder="Keep a name or multiple names">
+
+    <div class="modal-subtitle">Recommended</div>
+
+    <div class="rec-list">
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p1.svg" alt="">
+        <div>
+          <div class="rec-name">Michael Schmidt</div>
+          <div class="rec-desc">Pursuing MBA at Lead college of Management</div>
+        </div>
+      </div>
+
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p2.svg" alt="">
+        <div>
+          <div class="rec-name">Sana Saeed</div>
+          <div class="rec-desc">Creative Director at HASH Maldives</div>
+        </div>
+      </div>
+
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p4.svg" alt="">
+        <div>
+          <div class="rec-name">Anna Gohnsom</div>
+          <div class="rec-desc">Pursuing MBA at Lead college of Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="msgFiltersMenu" class="dropdown">
+  <button class="drop-item active" type="button">Unread</button>
+  <button class="drop-item" type="button">Drafts</button>
+  <button class="drop-item" type="button">My contacts</button>
+  <button class="drop-item" type="button">Favorites</button>
+  <button class="drop-item" type="button">Archived</button>
+  <button class="drop-item" type="button">Spam</button>
+</div>
+
+<div id="msgDotsMenu" class="dropdown">
+  <button class="drop-item active" type="button">Manage Discussions</button>
+  <button class="drop-item" type="button">Messaging settings</button>
+  <button class="drop-item" type="button">Set up an office absence</button>
+</div>
+
 
 </body>
 </html>
