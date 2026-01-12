@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LinkedIn - network</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="layout">
+
+<header class="app-top">
+  <div class="appbar">
+    <div class="inner">
+            <a class="logo" href="home.html"><img src="img/Frame 15922.svg" alt=""></a>
+
+      <div class="search">
+        <input type="text" placeholder="Search">
+      </div>
+
+      <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav">
+
+  <a href="home.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15417.svg" alt="Home">
+    </div>
+  </a>
+
+  <a href="network.html" class="nav-item active">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15420.svg" alt="Network">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15428.svg" alt="Vacancies">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15426.svg" alt="Messages">
+    </div>
+  </a>
+
+  <a href="#" class="nav-item">
+    <div class="nav-icon">
+      <img src="img/Property 1=Frame 15430.svg" alt="Notifications">
+    </div>
+  </a>
+
+</nav>
+
+</nav>
+
+      <div class="avatar">
+        <div class="pic"><img src="img/man.svg" alt=""></div>
+        <span style="font-size:11px; opacity:.95;">My Profile</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main class="app">
+    <div class="grid-3">
+
+      <aside class="panel left">
+        <h3 class="left__title">Manage your network of contacts</h3>
+
+        <a class="left__item" href="#"><span class="left__ico"><img src="img/Phosphor icons/Phosphor icons/User.svg" alt=""></span> Contacts</a>
+        <a class="left__item" href="#"><span class="left__ico"><img src="img/Phosphor icons/Phosphor icons/Users.svg" alt=""></span> People you follow</a>
+        <a class="left__item" href="#"><span class="left__ico"><img src="img/Phosphor icons/Phosphor icons/UsersThree.svg" alt=""></span> Groups</a>
+        <a class="left__item" href="#"><span class="left__ico"><img src="img/Phosphor icons/Phosphor icons/Calendar.svg" alt=""></span> Events</a>
+        <a class="left__item" href="#"><span class="left__ico"><img src="img/Phosphor icons/Phosphor icons/Browsers.svg" alt=""></span> Pages</a>
+      </aside>
+
+      <section class="panel center">
+
+        <div class="net-tabs links">
+          <a class="net-link active" href="network.html">New Connections</a>
+          <a class="net-link" href="event.html">Event</a>
+          <div class="net-line"></div>
+        </div>
+
+        <h4 class="net-title">PEOPLE IN THE “UI/UX DESIGN” YOU MAY KNOW</h4>
+
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p1.svg" alt=""></div>
+            <div class="person-name">David Jonson</div>
+            <div class="person-role">Lead UI/UX Designer</div>
+            <div class="person-handle">@JonsonCPDR</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p2.svg" alt=""></div>
+            <div class="person-name">Duncan Callahan</div>
+            <div class="person-role">Lead UI/UX Designer</div>
+            <div class="person-handle">@Callahandesign</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p3.svg" alt=""></div>
+            <div class="person-name">Joshua Cortez</div>
+            <div class="person-role">UI/UX Designer</div>
+            <div class="person-handle">@JoshuaCortezUIUX</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p4.svg" alt=""></div>
+            <div class="person-name">Jennifer O’Brian</div>
+            <div class="person-role">UI/UX Designer</div>
+            <div class="person-handle">@JenniferOBrian87</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p5.svg" alt=""></div>
+            <div class="person-name">Emma Knight</div>
+            <div class="person-role">Senior UI/UX Designer</div>
+            <div class="person-handle">@realemmaknight</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar"><img src="img/Phosphor icons/p6.svg" alt=""></div>
+            <div class="person-name">Michael Kennedy</div>
+            <div class="person-role">Junior UI/UX Designer</div>
+            <div class="person-handle">@kennedyux</div>
+            <button class="person-btn" type="button">Make contact</button>
+          </article>
+        </div>
+      </section>
+
+ <aside class="panel">
+      <div class="messages-top">
+        <div class="title"><h3>Messages</h3></div>
+        <div class="ico-messages">
+
+     <button class="msg-dots" id="openMsgMenu" type="button">
+  <img src="img/Fether icons/more-horizontal.svg" alt="">
+</button>
+
+        <div><img src="img/Fether icons/edit.svg" alt=""></div>
+        <div><img src="img/CaretCircleDown.svg" alt=""></div>
+
+      </div>
+      </div>
+
+  <div class="msg-search-row">
+    <div class="msg-search">
+      <input type="text" placeholder="Search messages">
+    </div>
+
+<button class="msg-filter" id="openMsgFilters" type="button" aria-label="Filters" title="Filters">
+  <img src="img/Phosphor icons/Sliders.svg" alt="" style="width:20px;">
+
+    </button>
+  </div>
+
+<input class="msg-radio" type="radio" name="msgtab" id="tabSorted" checked>
+<input class="msg-radio" type="radio" name="msgtab" id="tabOther">
+
+<div class="msg-tabs">
+  <label class="tab" for="tabSorted">Sorted</label>
+  <label class="tab" for="tabOther">Other</label>
+  <div class="tab-line"></div>
+</div>
+
+
+      <div class="empty-mail">
+        <div>
+            <img src="img/Mail_Illustration.svg" alt="">
+          <div style="font-weight:700; margin-bottom:6px;">No messages yet</div>
+          <div>Contact a member and start a discussion</div>
+          <button class="msg-btn" id="openNewMessage">Send a message</button>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">General information</div>
+          <div class="ai"><a href="#" >Careers</a></div>
+          <div class="ai"><a href="#">Ad Settings</a></div>
+          <div class="ai"><a href="#" class="ai">Security Center</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Accessibility</div>
+          <div class="ai"><a href="#" class="ai">Privacy and Terms</a></div>
+          <div class="ai"><a href="#" class="ai">Mobile Phone</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Policies for the Professional Community</div>
+          <div class="ai"><a href="#" class="ai">Sales Solutions</a></div>
+          <div class="ai"><a href="#" class="ai">Advertising Solutions</a></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:700;margin-bottom:8px;">Questions?</div>
+          <div class="ai"><a href="#" class="ai">Visit our Help Center</a></div>
+          <div class="ai"><a href="#" class="ai">Manage Account and Privacy</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+
+<div id="uiOverlay" class="ui-overlay"></div>
+
+<div id="newMessageModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div class="modal-title">New message</div>
+      <button class="modal-close" id="closeNewMessage" type="button">✕</button>
+    </div>
+
+    <input class="modal-input" type="text" placeholder="Keep a name or multiple names">
+
+    <div class="modal-subtitle">Recommended</div>
+
+     <div class="rec-list">
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p1.svg" alt="">
+        <div>
+          <div class="rec-name">Michael Schmidt</div>
+          <div class="rec-desc">Pursuing MBA at Lead college of Management</div>
+        </div>
+      </div>
+
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p2.svg" alt="">
+        <div>
+          <div class="rec-name">Sana Saeed</div>
+          <div class="rec-desc">Creative Director at HASH Maldives</div>
+        </div>
+      </div>
+
+      <div class="rec-item">
+        <img class="rec-ava" src="img/Phosphor icons/p4.svg" alt="">
+        <div>
+          <div class="rec-name">Anna Gohnsom</div>
+          <div class="rec-desc">Pursuing MBA at Lead college of Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="msgFiltersMenu" class="dropdown">
+  <button class="drop-item active" type="button">Unread</button>
+  <button class="drop-item" type="button">Drafts</button>
+  <button class="drop-item" type="button">My contacts</button>
+  <button class="drop-item" type="button">Favorites</button>
+  <button class="drop-item" type="button">Archived</button>
+  <button class="drop-item" type="button">Spam</button>
+</div>
+
+<div id="msgDotsMenu" class="dropdown">
+  <button class="drop-item active" type="button">Manage Discussions</button>
+  <button class="drop-item" type="button">Messaging settings</button>
+  <button class="drop-item" type="button">Set up an office absence</button>
+</div>
+
+
+</body>
+</html>
+
