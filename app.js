@@ -1,3 +1,5 @@
+let posts = JSON.parse(localStorage.getItem("posts") || "[]");
+
 function $(sel){ return document.querySelector(sel); }
 
 function saveUser(email, password){
@@ -340,21 +342,41 @@ function renderPosts(){
   });
 }
 
+  function deletePost(index){
+  const posts = JSON.parse(localStorage.getItem("linkup_posts") || "[]");
+  posts.splice(index, 1);
+  localStorage.setItem("linkup_posts", JSON.stringify(posts));
+  renderPosts();
+}
+
+function renderPosts(){
+  const feed = document.getElementById("feed");
+  if(!feed) return;
+
+  const posts = JSON.parse(localStorage.getItem("linkup_posts") || "[]");
   feed.innerHTML = "";
 
-  posts.slice().reverse().forEach(p => {
+  posts.slice().reverse().forEach((p, indexFromTop) => {
+    const realIndex = posts.length - 1 - indexFromTop;
+
     const el = document.createElement("article");
     el.className = "panel post";
     el.innerHTML = `
       <div class="post-head">
-        <div class="mini-avatar"></div>
+        <div class="mini-avatar">
+          <img src="img/man.svg" alt="" style="width: 33px;">
+        </div>
         <div class="meta">
           <div class="who">${escapeHtml(p.author)}</div>
           <div class="job">${escapeHtml(p.role)}</div>
         </div>
+
+        <button class="delete-post-btn" data-index="${realIndex}">✕</button>
       </div>
 
-      <div class="post-body">${escapeHtml(p.text).replace(/\n/g,"<br>")}</div>
+      <div class="post-body">
+        ${escapeHtml(p.text).replace(/\n/g, "<br>")}
+      </div>
 
       <div class="post-actions">
         <div>Like</div>
@@ -363,15 +385,77 @@ function renderPosts(){
         <div>Send</div>
       </div>
     `;
+
     feed.appendChild(el);
   });
 
-  function deletePost(index){
-  const posts = JSON.parse(localStorage.getItem("linkup_posts") || "[]");
-
-  posts.splice(index, 1); 
-  localStorage.setItem("linkup_posts", JSON.stringify(posts));
-
-  renderPosts();
+  document.querySelectorAll(".delete-post-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      deletePost(Number(btn.dataset.index));
+    });
+  });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("uiOverlay");
+  const modal = document.getElementById("newMessageModal");
+  const filtersMenu = document.getElementById("msgFiltersMenu");
+  const dotsMenu = document.getElementById("msgDotsMenu");
+
+  const btnNewMsg = document.getElementById("openNewMessage");
+  const btnFilters = document.getElementById("openMsgFilters");
+  const btnDots = document.getElementById("openMsgMenu");
+  const btnClose = document.getElementById("closeNewMessage");
+
+  function closeAll(){
+    modal.classList.remove("show");
+    filtersMenu.classList.remove("show");
+    dotsMenu.classList.remove("show");
+    overlay.classList.remove("show");
+  }
+
+  overlay.addEventListener("click", closeAll);
+  document.addEventListener("keydown", (e) => e.key === "Escape" && closeAll());
+
+  btnNewMsg.addEventListener("click", () => {
+    closeAll();
+    modal.classList.add("show");
+    overlay.classList.add("show");
+  });
+
+  btnClose.addEventListener("click", closeAll);
+
+  btnFilters.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const r = btnFilters.getBoundingClientRect();
+    closeAll();
+    filtersMenu.style.left = (r.left - 140) + "px";
+    filtersMenu.style.top = (r.bottom + 8) + "px";
+    filtersMenu.classList.add("show");
+    overlay.classList.add("show");
+  });
+
+  btnDots.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const r = btnDots.getBoundingClientRect();
+    closeAll();
+    dotsMenu.style.left = (r.left - 150) + "px";
+    dotsMenu.style.top = (r.bottom + 8) + "px";
+    dotsMenu.classList.add("show");
+    overlay.classList.add("show");
+  });
+
+  filtersMenu.addEventListener("click", (e) => {
+    const b = e.target.closest(".drop-item");
+    if (!b) return;
+    filtersMenu.querySelectorAll(".drop-item").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+  });
+
+  dotsMenu.addEventListener("click", (e) => {
+    const b = e.target.closest(".drop-item");
+    if (!b) return;
+    dotsMenu.querySelectorAll(".drop-item").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+  });
+});
