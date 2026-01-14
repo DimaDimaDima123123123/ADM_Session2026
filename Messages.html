@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkUp — Messages</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styleMessages.css" />
+</head>
+
+<body>
+  <header class="app-top">
+    <div class="appbar">
+      <div class="inner">
+        <a class="logo" href="home.html" aria-label="Home">
+          <img src="img/Frame 15922.svg" alt="">
+        </a>
+
+        <div class="top-search">
+          <img class="top-search__ico" src="img/search.svg" alt="">
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu">
+          <img src="img/menu.svg" alt="">
+        </button>
+
+        <nav class="nav" id="topNav" aria-label="Top navigation">
+          <a href="home.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15417.svg" alt=""></span>
+            <span class="nav-text">Home</span>
+          </a>
+
+          <a href="network.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15420.svg" alt=""></span>
+            <span class="nav-text">Network</span>
+          </a>
+
+          <a href="vacancies.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15428.svg" alt=""></span>
+            <span class="nav-text">Vacancies</span>
+          </a>
+
+          <a href="Messages.html" class="nav-item active">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15426.svg" alt=""></span>
+            <span class="nav-text">Messages</span>
+          </a>
+
+          <a href="notifications.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15430.svg" alt=""></span>
+            <span class="nav-text">Notifications</span>
+          </a>
+
+          <a href="profile.htm" class="nav-item">
+            <span class="nav-avatar"><img src="img/pfp.png" alt=""></span>
+            <span class="nav-text">My Profile</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="msg-page">
+    <div class="msg-layout">
+
+      <aside class="chatlist card">
+        <div class="chatlist__tabs">
+          <button class="cl-tab is-active" id="tabChats" type="button">Chats <span class="badge" id="badgeChats">25</span></button>
+          <button class="cl-tab" id="tabArchived" type="button">Archived</button>
+        </div>
+
+        <div class="chatlist__search">
+          <img src="img/search.svg" class="cl-search-ico" alt="">
+          <input id="chatSearch" type="text" placeholder="Search" aria-label="Search chats">
+        </div>
+
+        <div class="chatlist__items" id="chatList"></div>
+      </aside>
+
+      <section class="dialog card">
+        <div class="dialog__top">
+          <div class="dialog__who">
+            <div class="avatar avatar--lg">
+              <img id="dlgAvatar" src="img/Ellipse712.svg" alt="">
+            </div>
+
+            <div class="who__text">
+              <div class="who__name" id="dlgName">Marcus Dias</div>
+              <div class="who__status" id="dlgStatus">Active Now</div>
+            </div>
+          </div>
+
+          <div class="dialog__actions">
+            <button class="iconbtn" type="button" aria-label="Call">
+              <!-- если у тебя есть отдельная трубка — замени src -->
+              <img src="img/ArrowCircleRight.svg" alt="">
+            </button>
+            <button class="iconbtn" type="button" aria-label="Search">
+              <img src="img/search.svg" alt="">
+            </button>
+            <button class="iconbtn" type="button" aria-label="More">
+              <img src="img/3dots.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="dialog__line"></div>
+
+        <div class="dialog__body" id="dlgBody">
+        </div>
+
+        <div class="dialog__newline">
+          <span class="newline__line"></span>
+          <span class="newline__text">New Messages</span>
+          <span class="newline__line"></span>
+        </div>
+
+        <div class="dialog__composer">
+          <input id="composerInput" type="text" placeholder="Write something..." aria-label="Write message">
+          <button class="miniicon" type="button" aria-label="Emoji">
+            <span>☺</span>
+          </button>
+          <button class="miniicon" type="button" aria-label="Attach">
+            <img src="img/ArrowCircleRight.svg" alt="">
+          </button>
+        </div>
+      </section>
+
+      <aside class="profile card">
+        <div class="profile__top">
+          <div class="profile__avatar">
+            <img id="pfAvatar" src="img/Ellipse712.svg" alt="">
+          </div>
+          <div class="profile__name" id="pfName">Marcus Dias</div>
+        </div>
+
+        <div class="profile__section">
+          <div class="pf-label">Phone Number</div>
+          <div class="pf-value" id="pfPhone">+880 789 569 895</div>
+          <div class="pf-sep"></div>
+
+          <div class="pf-label">Email Address</div>
+          <div class="pf-value" id="pfEmail">MarcusAntonioDias@gmail.com</div>
+          <div class="pf-sep"></div>
+
+          <div class="pf-label">Current Position</div>
+          <div class="pf-value" id="pfPos">Senior Design Manager • Microsoft</div>
+          <div class="pf-sub" id="pfPosYears">2022 – now (3 years)</div>
+          <div class="pf-sep"></div>
+
+          <div class="pf-label">Education</div>
+          <div class="pf-value" id="pfEdu1">University of Texas, Austin (UT Austin)</div>
+          <div class="pf-sub" id="pfEdu2">Bachelor of Fine Arts (B.F.A.) 2011–2015</div>
+          <div class="pf-sub" id="pfEdu3">Master of Fine Arts (M.F.A.) 2015–2017</div>
+          <div class="pf-sep"></div>
+
+          <div class="pf-label">Birth Date</div>
+          <div class="pf-value" id="pfBirth">10 June, 1994</div>
+          <div class="pf-sep"></div>
+
+          <div class="pf-label">Website</div>
+          <div class="pf-value" id="pfSite">www.marcusdias.com</div>
+        </div>
+      </aside>
+
+    </div>
+    <footer class="footer2">
+  <div class="footer2__inner">
+
+    <div class="footer2__cols">
+      <div class="footer2__col">
+        <div class="footer2__title">General information</div>
+        <a class="footer2__link" href="#">Careers</a>
+        <a class="footer2__link" href="#">Ad Settings</a>
+        <a class="footer2__link" href="#">Security Center</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Accessibility</div>
+        <a class="footer2__link" href="#">Privacy and Terms</a>
+        <a class="footer2__link" href="#">Mobile Phone</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Policies for the Professional Community</div>
+        <a class="footer2__link" href="#">Sales Solutions</a>
+        <a class="footer2__link" href="#">Advertising Solutions</a>
+      </div>
+    </div>
+
+    <div class="footer2__right">
+
+      <div class="footer2__help">
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/Question.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_q_title">Question?</div>
+            <a class="footer2__helpLink" href="#" data-i18n="help_q_link">Visit our Help Center.</a>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/GearSix.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_manage_title">Manage Account and Privacy</div>
+            <div class="footer2__helpText" data-i18n="help_manage_text">Go to settings.</div>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/ShieldCheck.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_trans_title">Recommendation Transparency</div>
+            <div class="footer2__helpText" data-i18n="help_trans_text">Learn more about recommended content.</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer2__lang" id="langWrap">
+        <div class="footer2__langLabel" data-i18n="lang_label">Language</div>
+
+        <button class="footer2__langBtn" type="button" id="langBtn" aria-expanded="false">
+          <span id="langCurrent">English</span>
+          <span class="footer2__chev" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="footer2__langList" id="langList" role="menu" aria-label="Language">
+          <button class="footer2__langItem is-active" type="button" data-lang="en" role="menuitem">English</button>
+          <button class="footer2__langItem" type="button" data-lang="uk" role="menuitem">Українська</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+  </main>
+
+  <script>
+    (() => {
+      const burgerBtn = document.getElementById("burgerBtn");
+      const topNav = document.getElementById("topNav");
+      if (!burgerBtn || !topNav) return;
+      burgerBtn.addEventListener("click", () => topNav.classList.toggle("open"));
+    })();
+    const chats = [
+      {
+        id: "marcus",
+        name: "Marcus Dias",
+        avatar: "img/Ellipse712.svg",
+        status: "Active Now",
+        time: "45 min",
+        unread: 0,
+        previewYou: "You: Thanks! Good luck.",
+        profile: {
+          phone: "+880 789 569 895",
+          email: "MarcusAntonioDias@gmail.com",
+          pos: "Senior Design Manager • Microsoft",
+          posYears: "2022 – now (3 years)",
+          edu1: "University of Texas, Austin (UT Austin)",
+          edu2: "Bachelor of Fine Arts (B.F.A.) 2011–2015",
+          edu3: "Master of Fine Arts (M.F.A.) 2015–2017",
+          birth: "10 June, 1994",
+          site: "www.marcusdias.com"
+        },
+        messages: [
+          { from: "them", text: "Hello there!", at: "" },
+          { from: "them", text: "I just finished a draft of the homepage. Take a look and let me know what you think about the idea of a bold headline with a textured fabric background.", at: "2 hours ago" },
+          { from: "me", text: "Hey! It’s an interesting concept, but the background feels a bit distracting from the head line. Maybe we could tone down the texture or blur it slightly?", at: "15 minutes ago" },
+          { from: "them", text: "Great idea! I’ll try lowering the contrast and see how it looks. I’ll also double-check how the font works with the change.", at: "5 minutes ago" },
+          { from: "me", text: "Sounds good! Let me know if you need help with button colors — they’re blending in a bit too much with the other elements right now.", at: "1 minute ago" }
+        ]
+      },
+
+      {
+        id: "emily",
+        name: "Alena Curtis",
+        avatar: "img/emily.png",
+        status: "Active Now",
+        time: "2 min",
+        unread: 10,
+        previewYou: "Alright, I’ll call you back.",
+        profile: {
+          phone: "+1 415 222 0191",
+          email: "alena.curtis@mail.com",
+          pos: "Product Designer • Spotify",
+          posYears: "2023 – now (1 year)",
+          edu1: "University of California, Berkeley",
+          edu2: "B.A. Design 2014–2018",
+          edu3: "—",
+          birth: "21 March, 1996",
+          site: "www.alenacurtis.com"
+        },
+        messages: [
+          { from: "them", text: "Hey! Are you free today?", at: "1 hour ago" },
+          { from: "me", text: "Maybe later вечером. Что случилось?", at: "55 min ago" },
+          { from: "them", text: "Need quick review for the landing page spacing.", at: "50 min ago" }
+        ]
+      },
+
+      {
+        id: "handsome",
+        name: "Abram Lipshutz",
+        avatar: "img/handsome.svg",
+        status: "Online",
+        time: "3 h",
+        unread: 1,
+        previewYou: "Looking forward to your confi…",
+        profile: {
+          phone: "+49 152 900 1122",
+          email: "abram.lipshutz@workmail.com",
+          pos: "Front-end Engineer • Google",
+          posYears: "2021 – now (4 years)",
+          edu1: "TU Berlin",
+          edu2: "B.Sc. CS 2013–2017",
+          edu3: "M.Sc. HCI 2017–2019",
+          birth: "02 Feb, 1993",
+          site: "www.abram.dev"
+        },
+        messages: [
+          { from: "them", text: "Can you send the updated components list?", at: "yesterday" },
+          { from: "me", text: "Да, скину сегодня.", at: "yesterday" }
+        ]
+      },
+
+      {
+        id: "man2",
+        name: "Hanna Bergson",
+        avatar: "img/man2.svg",
+        status: "Offline",
+        time: "3 h",
+        unread: 6,
+        previewYou: "Thanks for the offer!",
+        profile: {
+          phone: "+33 6 22 11 90 44",
+          email: "hanna.bergson@inbox.com",
+          pos: "HR Manager • Ubisoft",
+          posYears: "2020 – now (5 years)",
+          edu1: "Sorbonne University",
+          edu2: "B.A. Business 2012–2016",
+          edu3: "—",
+          birth: "14 Nov, 1992",
+          site: "www.hannabergson.com"
+        },
+        messages: [
+          { from: "them", text: "Thanks for the offer!", at: "3 days ago" },
+          { from: "me", text: "No problem 🙌", at: "3 days ago" }
+        ]
+      }
+    ];
+
+    const chatListEl = document.getElementById("chatList");
+    const chatSearchEl = document.getElementById("chatSearch");
+
+    const dlgAvatar = document.getElementById("dlgAvatar");
+    const dlgName = document.getElementById("dlgName");
+    const dlgStatus = document.getElementById("dlgStatus");
+    const dlgBody = document.getElementById("dlgBody");
+
+    const pfAvatar = document.getElementById("pfAvatar");
+    const pfName = document.getElementById("pfName");
+    const pfPhone = document.getElementById("pfPhone");
+    const pfEmail = document.getElementById("pfEmail");
+    const pfPos = document.getElementById("pfPos");
+    const pfPosYears = document.getElementById("pfPosYears");
+    const pfEdu1 = document.getElementById("pfEdu1");
+    const pfEdu2 = document.getElementById("pfEdu2");
+    const pfEdu3 = document.getElementById("pfEdu3");
+    const pfBirth = document.getElementById("pfBirth");
+    const pfSite = document.getElementById("pfSite");
+
+    let activeId = chats[0].id;
+
+    function escapeHtml(s){
+      return String(s)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    function renderChatList(filter=""){
+      const q = filter.trim().toLowerCase();
+      const list = chats.filter(c => !q || c.name.toLowerCase().includes(q));
+
+      chatListEl.innerHTML = list.map(c => {
+        const isActive = c.id === activeId ? "is-active" : "";
+        const unread = c.unread ? `<span class="cl-unread">${c.unread}</span>` : "";
+        return `
+          <button class="cl-item ${isActive}" data-id="${c.id}" type="button">
+            <span class="avatar">
+              <img src="${c.avatar}" alt="">
+            </span>
+
+            <span class="cl-mid">
+              <span class="cl-name">${escapeHtml(c.name)}</span>
+              <span class="cl-preview">${escapeHtml(c.previewYou)}</span>
+            </span>
+
+            <span class="cl-right">
+              <span class="cl-time">${escapeHtml(c.time)}</span>
+              ${unread}
+            </span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderDialog(chat){
+      dlgAvatar.src = chat.avatar;
+      dlgName.textContent = chat.name;
+      dlgStatus.textContent = chat.status;
+
+      dlgBody.innerHTML = chat.messages.map(m => {
+        const side = m.from === "me" ? "msg--me" : "msg--them";
+        const time = m.at ? `<div class="msg-time">${escapeHtml(m.at)}</div>` : "";
+        return `
+          <div class="msgrow ${side}">
+            <div class="bubble">
+              ${escapeHtml(m.text)}
+            </div>
+            ${time}
+          </div>
+        `;
+      }).join("");
+
+      dlgBody.scrollTop = dlgBody.scrollHeight;
+    }
+
+    function renderProfile(chat){
+      pfAvatar.src = chat.avatar;
+      pfName.textContent = chat.name;
+
+      pfPhone.textContent = chat.profile.phone;
+      pfEmail.textContent = chat.profile.email;
+      pfPos.textContent = chat.profile.pos;
+      pfPosYears.textContent = chat.profile.posYears;
+
+      pfEdu1.textContent = chat.profile.edu1;
+      pfEdu2.textContent = chat.profile.edu2;
+      pfEdu3.textContent = chat.profile.edu3;
+
+      pfBirth.textContent = chat.profile.birth;
+      pfSite.textContent = chat.profile.site;
+    }
+
+    function setActive(id){
+      activeId = id;
+      const chat = chats.find(c => c.id === id) || chats[0];
+      chat.unread = 0;
+
+      renderChatList(chatSearchEl.value);
+      renderDialog(chat);
+      renderProfile(chat);
+    }
+
+    chatListEl.addEventListener("click", (e) => {
+      const btn = e.target.closest(".cl-item");
+      if(!btn) return;
+      setActive(btn.dataset.id);
+    });
+
+    chatSearchEl.addEventListener("input", () => {
+      renderChatList(chatSearchEl.value);
+    });
+    renderChatList("");
+    setActive(activeId);
+  </script>
+</body>
+</html>

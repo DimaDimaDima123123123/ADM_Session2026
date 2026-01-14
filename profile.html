@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LinkUp — My Profile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleProfile.css">
+</head>
+
+<body class="profile">
+
+<header class="app-top">
+  <div class="appbar">
+    <div class="inner">
+
+      <!-- LOGO (больше, без бордера) -->
+      <a class="logo" href="home.html" aria-label="Home">
+        <img src="img/Frame 15922.svg" alt="LinkUp">
+      </a>
+
+      <!-- SEARCH (с иконкой, чтобы padding слева был логичный) -->
+      <div class="search">
+        <span class="search-ico" aria-hidden="true"><img src="img/search.svg"></span>
+        <input type="text" placeholder="Search" aria-label="Search">
+      </div>
+
+      <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- NAV (иконка + текст как на макете) -->
+      <nav class="nav" id="topNav" aria-label="Top navigation">
+        <a href="home.html" class="nav-item">
+          <div class="nav-icon"><img src="img/Property 1=Frame 15417.svg" alt=""></div>
+          <span class="nav-text">Home</span>
+        </a>
+
+        <a href="network.html" class="nav-item">
+          <div class="nav-icon"><img src="img/Property 1=Frame 15420.svg" alt=""></div>
+          <span class="nav-text">Network</span>
+        </a>
+
+        <a href="Vacancies.html" class="nav-item">
+          <div class="nav-icon"><img src="img/Property 1=Frame 15428.svg" alt=""></div>
+          <span class="nav-text">Vacancies</span>
+        </a>
+
+        <a href="Messages.html" class="nav-item">
+          <div class="nav-icon"><img src="img/Property 1=Frame 15426.svg" alt=""></div>
+          <span class="nav-text">Messages</span>
+        </a>
+
+        <a href="Notifications.html" class="nav-item">
+          <div class="nav-icon"><img src="img/Property 1=Frame 15430.svg" alt=""></div>
+          <span class="nav-text">Notifications</span>
+        </a>
+
+        <a href="profile.html" class="nav-item active">
+          <div class="nav-avatar"><img src="img/pfp.png" alt=""></div>
+          <span class="nav-text">My Profile</span>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="ProfileRedactorBody">
+
+  <div class="MainInfo">
+    <div class="MakeAphoto">
+      <div class="PhotoButton"><img src="img/Fether icons/Camera.svg" alt=""></div>
+    </div>
+
+    <div class="MainPfp"><img src="img/pfp.png" alt=""></div>
+
+    <a href="#" class="edit-icon" aria-label="Edit profile">
+      <img src="img/edit.svg" alt="">
+    </a>
+
+    <div class="MainInfoInner">
+      <div class="Info">
+        <div class="NameAndSchool">
+          <span class="name">Nathaniel Evans</span>
+          <div class="UCLA">
+            <img src="img/image18.svg" alt="">
+            <span>UCLA (Design Media Arts)</span>
+          </div>
+        </div>
+
+        <div class="Job">Junior UI/UX Designer · Microsoft</div>
+        <div class="Geo">Klamath Falls, Oregon, USA</div>
+
+        <div class="redacting">
+          <div class="LinkChange">
+            Change your custom portfolio link
+            <img src="img/Fether icons/arrow-up-right.svg" alt="">
+          </div>
+          <div class="EditContact">Edit contact information</div>
+        </div>
+      </div>
+
+      <div class="Buttons">
+        <div class="OpenTo">Open to</div>
+        <div class="AddProfSec">Add profile section</div>
+        <div class="More">More</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Analytics">
+    <div class="analytics-card">
+      <div class="analytics-head">
+        <div class="analytics-title">Analytics</div>
+        <div class="analytics-sub">
+          <img class="a-eye" src="img/EyeSlash.svg" alt="">
+          <span>Only you can see this</span>
+        </div>
+      </div>
+
+      <div class="analytics-stats">
+        <div class="stat">
+          <div class="stat-ico"><img src="img/users.svg" alt=""></div>
+          <div class="stat-body">
+            <div class="stat-top"><span class="stat-num">73</span> profile views</div>
+            <div class="stat-desc">To attract viewers, update<br>your profile</div>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-ico"><img src="img/AlignBottom.svg" alt=""></div>
+          <div class="stat-body">
+            <div class="stat-top"><span class="stat-num">128</span> post views</div>
+            <div class="stat-desc">To attract more followers,<br>start a post</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics-dd" id="analyticsDD">
+        <button class="analytics-btn" type="button" id="analyticsToggle">
+          <span>Show all analytics</span>
+          <span class="analytics-arrow"><img src="img/ArrowCircleRight.svg" alt=""></span>
+        </button>
+
+        <div class="analytics-list" id="analyticsList">
+          <a href="#" class="analytics-item">Lorem ipsum</a>
+          <a href="#" class="analytics-item">Dolor sit</a>
+          <a href="#" class="analytics-item">Amet elit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="Experience" id="experienceBlock">
+    <div class="exp-card">
+      <button class="exp-close" type="button" id="expClose" aria-label="Close">×</button>
+
+      <div class="exp-head">
+        <div>
+          <div class="exp-title">Experience</div>
+          <div class="exp-subtitle">
+            Show everyone your achievement and get twice as many profile and contact information views
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-body">
+        <div class="exp-row">
+          <div class="exp-ico"><img src="img/Suitcase.svg" alt=""></div>
+
+          <div class="exp-view">
+            <div class="exp-pos" id="expPos">Position</div>
+            <div class="exp-org" id="expOrg">Organization</div>
+            <div class="exp-dates"><span id="expFrom">2012</span> - <span id="expTo">now</span></div>
+          </div>
+
+          <form class="exp-edit" id="expEdit" autocomplete="off">
+            <input class="exp-input" id="inPos" type="text" placeholder="Position" inputmode="text">
+            <input class="exp-input" id="inOrg" type="text" placeholder="Organization" inputmode="text">
+
+            <div class="exp-edit-dates">
+              <input class="exp-input exp-year" id="inFrom" type="text" placeholder="2012" inputmode="numeric" maxlength="4">
+              <span class="exp-dash">-</span>
+              <input class="exp-input exp-year" id="inTo" type="text" placeholder="now" inputmode="text" maxlength="4">
+            </div>
+          </form>
+        </div>
+
+        <div class="exp-actions">
+          <button class="exp-btn" type="button" id="expAdd">Add experience</button>
+          <button class="exp-btn primary" type="button" id="expSave" disabled>Save</button>
+          <button class="exp-btn ghost" type="button" id="expCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="Education" id="eduBlock">
+    <div class="edu-card">
+      <div class="edu-head">
+        <div class="edu-title">Education</div>
+
+        <div class="edu-actions">
+          <button class="edu-ico-btn" type="button" id="eduAddBtn" aria-label="Add">+</button>
+
+          <!-- edit toggle (edit.svg <-> ×) -->
+          <button class="edu-ico-btn" type="button" id="eduEditAllBtn" aria-label="Edit All">
+            <img src="img/edit.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="edu-items" id="eduItems">
+        <div class="edu-item" data-editable>
+          <div class="edu-logo"><img src="img/image18.svg" alt=""></div>
+
+          <div class="edu-view">
+            <div class="edu-uni">University of California, Los Angeles (UCLA)</div>
+            <div class="edu-years">2014–2018</div>
+          </div>
+
+          <div class="edu-edit-form" style="display:none;">
+            <input class="edu-input edu-edit-uni" type="text" value="University of California, Los Angeles (UCLA)">
+            <div class="edu-edit-years">
+              <input class="edu-input edu-year edu-edit-from" type="text" value="2014" maxlength="4">
+              <span class="edu-dash">–</span>
+              <input class="edu-input edu-year edu-edit-to" type="text" value="2018" maxlength="4">
+            </div>
+
+            <div class="edu-edit-actions">
+              <button class="edu-save-edit" type="button">Save</button>
+              <button class="edu-cancel-edit" type="button">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-add-form-wrapper" id="eduAddFormWrapper">
+        <div class="edu-add-item">
+          <div class="edu-logo"><img src="img/image18.svg" alt=""></div>
+
+          <div class="edu-add-form">
+            <input class="edu-input" id="addUniIn" type="text" placeholder="University name">
+            <div class="edu-edit-years">
+              <input class="edu-input edu-year" id="addFromIn" type="text" placeholder="2014" maxlength="4">
+              <span class="edu-dash">–</span>
+              <input class="edu-input edu-year" id="addToIn" type="text" placeholder="2018" maxlength="4">
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-add-actions">
+          <button class="edu-save" type="button" id="eduSaveBtn" disabled>Save</button>
+          <button class="edu-cancel" type="button" id="eduCancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Skills" id="skillsBlock">
+    <div class="skills-card">
+      <button class="skills-close" type="button" id="skillsClose" aria-label="Close">×</button>
+
+      <div class="skills-head">
+        <div>
+          <div class="skills-title">Skills</div>
+          <div class="skills-subtitle">
+            Communicate your readiness for new opportunities - 50% of employers use skills data to fill their positions
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-body">
+        <div class="skills-view" id="skillsView">
+          <div class="skills-row">
+            <div class="skills-placeholder" id="skillsCommText">Communication skills</div>
+            <div class="skills-line"></div>
+          </div>
+
+          <div class="skills-row">
+            <div class="skills-placeholder" id="skillsTechText">Technical skills</div>
+          </div>
+        </div>
+
+        <form class="skills-edit" id="skillsEdit" autocomplete="off">
+          <input class="skills-input" id="skillsCommIn" type="text" placeholder="Communication skills" inputmode="text">
+          <div class="skills-line"></div>
+          <input class="skills-input" id="skillsTechIn" type="text" placeholder="Technical skills" inputmode="text">
+
+          <div class="skills-actions">
+            <button class="skills-btn ghost" type="button" id="skillsCancel">Cancel</button>
+            <button class="skills-btn primary" type="button" id="skillsSave" disabled>Save</button>
+          </div>
+        </form>
+
+        <button class="skills-mainbtn" type="button" id="skillsAction">Add skills</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer class="footer2">
+  <div class="footer2__inner">
+
+    <div class="footer2__cols">
+      <div class="footer2__col">
+        <div class="footer2__title">General information</div>
+        <a class="footer2__link" href="#">Careers</a>
+        <a class="footer2__link" href="#">Ad Settings</a>
+        <a class="footer2__link" href="#">Security Center</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Accessibility</div>
+        <a class="footer2__link" href="#">Privacy and Terms</a>
+        <a class="footer2__link" href="#">Mobile Phone</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Policies for the Professional Community</div>
+        <a class="footer2__link" href="#">Sales Solutions</a>
+        <a class="footer2__link" href="#">Advertising Solutions</a>
+      </div>
+    </div>
+
+    <div class="footer2__right">
+
+      <div class="footer2__help">
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/Question.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_q_title">Question?</div>
+            <a class="footer2__helpLink" href="#" data-i18n="help_q_link">Visit our Help Center.</a>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/GearSix.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_manage_title">Manage Account and Privacy</div>
+            <div class="footer2__helpText" data-i18n="help_manage_text">Go to settings.</div>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/ShieldCheck.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_trans_title">Recommendation Transparency</div>
+            <div class="footer2__helpText" data-i18n="help_trans_text">Learn more about recommended content.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer2__lang" id="langWrap">
+        <div class="footer2__langLabel" data-i18n="lang_label">Language</div>
+
+        <button class="footer2__langBtn" type="button" id="langBtn" aria-expanded="false">
+          <span id="langCurrent">English</span>
+          <span class="footer2__chev" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="footer2__langList" id="langList" role="menu" aria-label="Language">
+          <button class="footer2__langItem is-active" type="button" data-lang="en" role="menuitem">English</button>
+          <button class="footer2__langItem" type="button" data-lang="uk" role="menuitem">Українська</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+(() => {
+  const burgerBtn = document.getElementById("burgerBtn");
+  const topNav = document.getElementById("topNav");
+  if (!burgerBtn || !topNav) return;
+  burgerBtn.addEventListener("click", () => topNav.classList.toggle("open"));
+})();
+
+(() => {
+  const dd = document.getElementById("analyticsDD");
+  const toggle = document.getElementById("analyticsToggle");
+  if (!dd || !toggle) return;
+  toggle.addEventListener("click", () => dd.classList.toggle("open"));
+})();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const block = document.getElementById("experienceBlock");
+  if (!block) return;
+
+  const addBtn = document.getElementById("expAdd");
+  const saveBtn = document.getElementById("expSave");
+  const cancelBtn = document.getElementById("expCancel");
+  const closeBtn = document.getElementById("expClose");
+
+  const viewPos = document.getElementById("expPos");
+  const viewOrg = document.getElementById("expOrg");
+  const viewFrom = document.getElementById("expFrom");
+  const viewTo = document.getElementById("expTo");
+
+  const inPos = document.getElementById("inPos");
+  const inOrg = document.getElementById("inOrg");
+  const inFrom = document.getElementById("inFrom");
+  const inTo = document.getElementById("inTo");
+
+  const DEFAULT = { pos: "Position", org: "Organization", from: "2012", to: "now" };
+
+  const lettersOnly = (s) => s.trim().length > 0 && /^[A-Za-z\s.'-]+$/.test(s.trim());
+  const yearOnly = (s) => /^\d{4}$/.test(s.trim());
+  const yearOrNow = (s) => {
+    const v = s.trim().toLowerCase();
+    return yearOnly(v) || v === "now";
+  };
+
+  const cleanLetters = (el) => el.value = el.value.replace(/[^A-Za-z\s.'-]/g, "");
+  const cleanYear = (el) => el.value = el.value.replace(/[^\d]/g, "").slice(0,4);
+  const cleanYearOrNow = (el) => {
+    const v = el.value.toLowerCase();
+    if (v === "now"){ el.value = "now"; return; }
+    el.value = el.value.replace(/[^\d]/g, "").slice(0,4);
+  };
+
+  const resetInputs = () => {
+    inPos.value = "";
+    inOrg.value = "";
+    inFrom.value = "";
+    inTo.value = "";
+  };
+
+  const validate = () => {
+    if (!block.classList.contains("is-editing")) return;
+    const ok =
+      lettersOnly(inPos.value) &&
+      lettersOnly(inOrg.value) &&
+      yearOnly(inFrom.value) &&
+      yearOrNow(inTo.value);
+    saveBtn.disabled = !ok;
+  };
+
+  const setEditing = (on) => {
+    block.classList.toggle("is-editing", on);
+    if (on){
+      saveBtn.disabled = true;
+      setTimeout(() => inPos.focus(), 0);
+      validate();
+    } else {
+      saveBtn.disabled = true;
+    }
+  };
+
+  inPos.addEventListener("input", () => { cleanLetters(inPos); validate(); });
+  inOrg.addEventListener("input", () => { cleanLetters(inOrg); validate(); });
+  inFrom.addEventListener("input", () => { cleanYear(inFrom); validate(); });
+  inTo.addEventListener("input", () => { cleanYearOrNow(inTo); validate(); });
+
+  addBtn.addEventListener("click", () => {
+    resetInputs();
+    setEditing(true);
+  });
+
+  saveBtn.addEventListener("click", () => {
+    if (saveBtn.disabled) return;
+    viewPos.textContent = inPos.value.trim();
+    viewOrg.textContent = inOrg.value.trim();
+    viewFrom.textContent = inFrom.value.trim();
+    viewTo.textContent = (inTo.value.trim().toLowerCase() === "now") ? "now" : inTo.value.trim();
+    resetInputs();
+    setEditing(false);
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    resetInputs();
+    setEditing(false);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    viewPos.textContent = DEFAULT.pos;
+    viewOrg.textContent = DEFAULT.org;
+    viewFrom.textContent = DEFAULT.from;
+    viewTo.textContent = DEFAULT.to;
+    resetInputs();
+    setEditing(false);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const eduBlock = document.getElementById("eduBlock");
+  const eduAddBtn = document.getElementById("eduAddBtn");
+  const eduEditAllBtn = document.getElementById("eduEditAllBtn");
+  const eduSaveBtn = document.getElementById("eduSaveBtn");
+  const eduCancelBtn = document.getElementById("eduCancelBtn");
+  const eduItems = document.getElementById("eduItems");
+  const eduAddFormWrapper = document.getElementById("eduAddFormWrapper");
+
+  const addUniIn = document.getElementById("addUniIn");
+  const addFromIn = document.getElementById("addFromIn");
+  const addToIn = document.getElementById("addToIn");
+
+  let isEditMode = false;
+
+  if (!eduBlock || !eduAddBtn || !eduEditAllBtn || !eduSaveBtn || !eduCancelBtn || !eduItems || !eduAddFormWrapper) return;
+
+  function clearAddForm(){
+    addUniIn.value = "";
+    addFromIn.value = "";
+    addToIn.value = "";
+    eduSaveBtn.disabled = true;
+  }
+
+  function validateAddForm(){
+    const uniValid = addUniIn.value.trim().length >= 2;
+    const fromValid = /^\d{4}$/.test(addFromIn.value.trim());
+    const toValid = /^\d{4}$/.test(addToIn.value.trim()) || addToIn.value.trim().toLowerCase() === "now";
+    eduSaveBtn.disabled = !(uniValid && fromValid && toValid);
+  }
+
+  addUniIn.addEventListener("input", function(){
+    this.value = this.value.replace(/[^A-Za-zА-Яа-я\s.'\-()&,]/g, '');
+    validateAddForm();
+  });
+  addFromIn.addEventListener("input", function(){
+    this.value = this.value.replace(/\D/g,'').slice(0,4);
+    validateAddForm();
+  });
+  addToIn.addEventListener("input", function(){
+    const v = this.value.toLowerCase();
+    if (v === "now"){ this.value = "now"; }
+    else { this.value = this.value.replace(/\D/g,'').slice(0,4); }
+    validateAddForm();
+  });
+
+  function addEditHandlersToItem(item){
+    const saveBtn = item.querySelector(".edu-save-edit");
+    const cancelBtn = item.querySelector(".edu-cancel-edit");
+    const uniInput = item.querySelector(".edu-edit-uni");
+    const fromInput = item.querySelector(".edu-edit-from");
+    const toInput = item.querySelector(".edu-edit-to");
+    const viewEl = item.querySelector(".edu-view");
+    const editForm = item.querySelector(".edu-edit-form");
+
+    if (!saveBtn || !cancelBtn || !uniInput || !fromInput || !toInput || !viewEl || !editForm) return;
+
+    uniInput.addEventListener("input", function(){
+      this.value = this.value.replace(/[^A-Za-zА-Яа-я\s.'\-()&,]/g, '');
+    });
+    fromInput.addEventListener("input", function(){
+      this.value = this.value.replace(/\D/g,'').slice(0,4);
+    });
+    toInput.addEventListener("input", function(){
+      const v = this.value.toLowerCase();
+      if (v === "now"){ this.value = "now"; }
+      else { this.value = this.value.replace(/\D/g,'').slice(0,4); }
+    });
+
+    saveBtn.addEventListener("click", () => {
+      const uni = uniInput.value.trim();
+      const from = fromInput.value.trim();
+      const to = toInput.value.trim();
+
+      if (!uni || !/^\d{4}$/.test(from) || !(to === "now" || /^\d{4}$/.test(to))) return;
+
+      viewEl.querySelector(".edu-uni").textContent = uni;
+      viewEl.querySelector(".edu-years").textContent = `${from}–${to}`;
+
+      viewEl.style.display = "block";
+      editForm.style.display = "none";
+    });
+
+    cancelBtn.addEventListener("click", () => {
+      const uniText = viewEl.querySelector(".edu-uni").textContent;
+      const yearsText = viewEl.querySelector(".edu-years").textContent.split("–");
+
+      uniInput.value = uniText;
+      fromInput.value = yearsText[0] || "";
+      toInput.value = yearsText[1] || "";
+
+      viewEl.style.display = "block";
+      editForm.style.display = "none";
+    });
+  }
+
+  function createNewEduItem(uni, from, to){
+    const newItem = document.createElement("div");
+    newItem.className = "edu-item";
+    newItem.setAttribute("data-editable","true");
+
+    newItem.innerHTML = `
+      <div class="edu-logo"><img src="img/image18.svg" alt=""></div>
+      <div class="edu-view">
+        <div class="edu-uni">${uni}</div>
+        <div class="edu-years">${from}–${to}</div>
+      </div>
+      <div class="edu-edit-form" style="display:none;">
+        <input class="edu-input edu-edit-uni" type="text" value="${uni}">
+        <div class="edu-edit-years">
+          <input class="edu-input edu-year edu-edit-from" type="text" value="${from}" maxlength="4">
+          <span class="edu-dash">–</span>
+          <input class="edu-input edu-year edu-edit-to" type="text" value="${to}" maxlength="4">
+        </div>
+        <div class="edu-edit-actions">
+          <button class="edu-save-edit" type="button">Save</button>
+          <button class="edu-cancel-edit" type="button">Cancel</button>
+        </div>
+      </div>
+    `;
+    addEditHandlersToItem(newItem);
+    return newItem;
+  }
+
+  eduItems.querySelectorAll(".edu-item[data-editable]").forEach(addEditHandlersToItem);
+
+  function toggleEditMode(){
+    isEditMode = !isEditMode;
+
+    const items = eduItems.querySelectorAll(".edu-item[data-editable]");
+    if (isEditMode){
+      eduEditAllBtn.textContent = "×";
+      eduEditAllBtn.classList.add("is-x");
+
+      items.forEach(item => {
+        const viewEl = item.querySelector(".edu-view");
+        const editForm = item.querySelector(".edu-edit-form");
+        if (viewEl && editForm){
+          viewEl.style.display = "none";
+          editForm.style.display = "grid";
+        }
+      });
+    } else {
+      eduEditAllBtn.classList.remove("is-x");
+      eduEditAllBtn.innerHTML = '<img src="img/edit.svg" alt="">';
+
+      items.forEach(item => {
+        const viewEl = item.querySelector(".edu-view");
+        const editForm = item.querySelector(".edu-edit-form");
+        if (viewEl && editForm){
+          viewEl.style.display = "block";
+          editForm.style.display = "none";
+        }
+      });
+    }
+  }
+
+  eduEditAllBtn.addEventListener("click", toggleEditMode);
+
+  eduAddBtn.addEventListener("click", () => {
+    eduBlock.classList.toggle("is-adding");
+    if (eduBlock.classList.contains("is-adding")) addUniIn.focus();
+    else clearAddForm();
+  });
+
+  eduCancelBtn.addEventListener("click", () => {
+    eduBlock.classList.remove("is-adding");
+    clearAddForm();
+  });
+
+  eduSaveBtn.addEventListener("click", () => {
+    if (eduSaveBtn.disabled) return;
+
+    const uni = addUniIn.value.trim();
+    const from = addFromIn.value.trim();
+    let to = addToIn.value.trim().toLowerCase();
+    if (to === "now") to = "now";
+
+    const newItem = createNewEduItem(uni, from, to);
+    eduItems.appendChild(newItem);
+
+    eduBlock.classList.remove("is-adding");
+    clearAddForm();
+  });
+
+  clearAddForm();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const block = document.getElementById("skillsBlock");
+  if (!block) return;
+
+  const closeBtn  = document.getElementById("skillsClose");
+  const actionBtn = document.getElementById("skillsAction");
+
+  const viewComm = document.getElementById("skillsCommText");
+  const viewTech = document.getElementById("skillsTechText");
+
+  const inComm = document.getElementById("skillsCommIn");
+  const inTech = document.getElementById("skillsTechIn");
+
+  const saveBtn   = document.getElementById("skillsSave");
+  const cancelBtn = document.getElementById("skillsCancel");
+
+  const DEFAULT = { comm:"Communication skills", tech:"Technical skills" };
+  let saved = { comm:"", tech:"" };
+
+  const setAddBtnHidden = (hidden) => actionBtn.classList.toggle("is-hidden", hidden);
+
+  const applyView = () => {
+    const commText = saved.comm.trim();
+    viewComm.textContent = commText || DEFAULT.comm;
+    viewComm.classList.toggle("is-filled", !!commText);
+
+    const techText = saved.tech.trim();
+    viewTech.textContent = techText || DEFAULT.tech;
+    viewTech.classList.toggle("is-filled", !!techText);
+  };
+
+  const validate = () => {
+    const a = inComm.value.trim();
+    const b = inTech.value.trim();
+    saveBtn.disabled = (a.length === 0 && b.length === 0);
+  };
+
+  const setEditing = (on) => {
+    block.classList.toggle("is-editing", on);
+    if (on){
+      setAddBtnHidden(true);
+      inComm.value = saved.comm;
+      inTech.value = saved.tech;
+      validate();
+      setTimeout(() => inComm.focus(), 0);
+    } else {
+      saveBtn.disabled = true;
+      setAddBtnHidden(false);
+    }
+  };
+
+  inComm.addEventListener("input", validate);
+  inTech.addEventListener("input", validate);
+
+  actionBtn.addEventListener("click", () => setEditing(true));
+
+  saveBtn.addEventListener("click", () => {
+    if (saveBtn.disabled) return;
+    saved.comm = inComm.value.trim();
+    saved.tech = inTech.value.trim();
+    applyView();
+    setEditing(false);
+  });
+
+  cancelBtn.addEventListener("click", () => setEditing(false));
+
+  closeBtn.addEventListener("click", () => {
+    saved.comm = "";
+    saved.tech = "";
+    inComm.value = "";
+    inTech.value = "";
+    applyView();
+    setEditing(false);
+  });
+
+  applyView();
+  setAddBtnHidden(false);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const langWrap = document.getElementById("langWrap");
+  const btn = document.getElementById("langBtn");
+  const list = document.getElementById("langList");
+  const current = document.getElementById("langCurrent");
+
+  if (!langWrap || !btn || !list || !current) return;
+
+  const i18n = {
+    en: {
+      lang_label: "Language",
+      help_q_title: "Question?",
+      help_q_link: "Visit our Help Center.",
+      help_manage_title: "Manage Account and Privacy",
+      help_manage_text: "Go to settings.",
+      help_trans_title: "Recommendation Transparency",
+      help_trans_text: "Learn more about recommended content."
+    },
+    uk: {
+      lang_label: "Мова",
+      help_q_title: "Питання?",
+      help_q_link: "Перейдіть у Довідковий центр.",
+      help_manage_title: "Керування акаунтом і приватністю",
+      help_manage_text: "Перейти до налаштувань.",
+      help_trans_title: "Прозорість рекомендацій",
+      help_trans_text: "Дізнайтеся більше про рекомендований контент."
+    }
+  };
+
+  const close = () => {
+    langWrap.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  const open = () => {
+    langWrap.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+  };
+
+  const applyLang = (lang) => {
+    const dict = i18n[lang] || i18n.en;
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) el.textContent = dict[key];
+    });
+
+    current.textContent = (lang === "uk") ? "Українська" : "English";
+
+    list.querySelectorAll(".footer2__langItem").forEach(b => b.classList.remove("is-active"));
+    const active = list.querySelector(`.footer2__langItem[data-lang="${lang}"]`);
+    if (active) active.classList.add("is-active");
+
+    localStorage.setItem("site_lang", lang);
+    document.documentElement.setAttribute("lang", lang === "uk" ? "uk" : "en");
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    langWrap.classList.contains("open") ? close() : open();
+  });
+
+  list.addEventListener("click", (e) => {
+    const item = e.target.closest(".footer2__langItem");
+    if (!item) return;
+    const lang = item.getAttribute("data-lang") || "en";
+    applyLang(lang);
+    close();
+  });
+
+  document.addEventListener("click", close);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+
+  const saved = localStorage.getItem("site_lang") || "en";
+  applyLang(saved);
+});
+</script>
+
+</body>
+</html>

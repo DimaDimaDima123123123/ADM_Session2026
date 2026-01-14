@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkUp — Notifications</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styleNotifications.css" />
+</head>
+
+<body>
+  <header class="app-top">
+    <div class="appbar">
+      <div class="inner">
+        <a class="logo" href="home.html" aria-label="Home">
+          <img src="img/Frame 15922.svg" alt="">
+        </a>
+
+        <div class="search">
+          <img class="search-ico" src="img/search.svg" alt="">
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Open menu">
+          <img src="img/menu.svg" alt="">
+        </button>
+        <nav class="nav" id="topNav" aria-label="Top navigation">
+          <a href="home.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15417.svg" alt=""></span>
+            <span class="nav-text">Home</span>
+          </a>
+          <a href="network.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15420.svg" alt=""></span>
+            <span class="nav-text">Network</span>
+          </a>
+
+          <a href="vacancies.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15428.svg" alt=""></span>
+            <span class="nav-text">Vacancies</span>
+          </a>
+
+          <a href="Messages.html" class="nav-item">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15426.svg" alt=""></span>
+            <span class="nav-text">Messages</span>
+          </a>
+
+          <a href="Notifications.html" class="nav-item active">
+            <span class="nav-icon"><img src="img/Property 1=Frame 15430.svg" alt=""></span>
+            <span class="nav-text">Notifications</span>
+          </a>
+
+          <a href="profile.htm" class="nav-item">
+            <span class="nav-avatar"><img src="img/pfp.png" alt=""></span>
+            <span class="nav-text">My Profile</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="layout">
+
+      <aside class="profile-card">
+        <div class="pc-top">
+          <div class="pc-avatar">
+            <img src="img/pfp.png" alt="Avatar">
+          </div>
+
+          <div class="pc-name">Nathaniel Evans</div>
+          <div class="pc-sub">Junior UI/UX Designer - Microsoft</div>
+
+          <div class="pc-line"></div>
+
+          <button class="pc-btn" type="button">+ Work experience</button>
+        </div>
+      </aside>
+
+      <section class="center">
+        <div class="tabs-card">
+          <button class="tab is-active" type="button">All</button>
+          <button class="tab" type="button">Vacancies</button>
+          <button class="tab" type="button">My publications</button>
+          <button class="tab" type="button">Mentions</button>
+        </div>
+
+        <div class="empty-card">
+          <div class="empty-illus">
+            <img src="img/error.svg" alt="">
+          </div>
+
+          <div class="empty-title">No new notifications</div>
+          <div class="empty-text">Check out the other updates on the home page</div>
+
+          <button class="empty-btn" type="button">Home page</button>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="messages-card" id="messagesCard">
+          <div class="messages-header">
+            <div class="messages-header-left">
+              <div class="messages-avatar">
+                <img src="img/pfp.png" alt="User avatar">
+              </div>
+              <div class="messages-title">Messages</div>
+            </div>
+
+            <div class="messages-header-icons">
+              <button class="hicon" type="button" aria-label="More"><img src="img/3dots.svg" alt=""></button>
+              <button class="hicon" type="button" aria-label="Edit"><img src="img/edit.svg" alt=""></button>
+              <button class="hicon" type="button" aria-label="Upload"><img src="img/upload.svg" alt=""></button>
+
+              <button class="hicon hicon--toggle" id="messagesToggle" type="button" aria-label="Toggle">
+                <img id="toggleIcon" src="img/CaretCircleDown.svg" alt="">
+              </button>
+            </div>
+          </div>
+
+          <div class="messages-content" id="messagesContent">
+            <div class="messages-search">
+              <img class="ms-ico" src="img/search.svg" alt="">
+              <input type="text" placeholder="Search messages" aria-label="Search messages">
+              <img class="ms-sliders" src="img/Sliders.svg" alt="">
+            </div>
+
+            <div class="messages-tabs">
+              <button class="messages-tab is-active" type="button">Sorted</button>
+              <button class="messages-tab" type="button">Other</button>
+            </div>
+
+            <div class="messages-empty">
+              <img class="mail-illus" src="img/Mail_Illustration.svg" alt="">
+              <div class="m-empty-title">No messages yet</div>
+              <div class="m-empty-text">Contact a member and start a discussion</div>
+              <button class="send-message-btn" type="button">Send a message</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+    <footer class="footer2">
+  <div class="footer2__inner">
+
+    <div class="footer2__cols">
+      <div class="footer2__col">
+        <div class="footer2__title">General information</div>
+        <a class="footer2__link" href="#">Careers</a>
+        <a class="footer2__link" href="#">Ad Settings</a>
+        <a class="footer2__link" href="#">Security Center</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Accessibility</div>
+        <a class="footer2__link" href="#">Privacy and Terms</a>
+        <a class="footer2__link" href="#">Mobile Phone</a>
+      </div>
+
+      <div class="footer2__col">
+        <div class="footer2__title">Policies for the Professional Community</div>
+        <a class="footer2__link" href="#">Sales Solutions</a>
+        <a class="footer2__link" href="#">Advertising Solutions</a>
+      </div>
+    </div>
+
+    <div class="footer2__right">
+
+      <div class="footer2__help">
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/Question.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_q_title">Question?</div>
+            <a class="footer2__helpLink" href="#" data-i18n="help_q_link">Visit our Help Center.</a>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/GearSix.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_manage_title">Manage Account and Privacy</div>
+            <div class="footer2__helpText" data-i18n="help_manage_text">Go to settings.</div>
+          </div>
+        </div>
+
+        <div class="footer2__helpItem">
+          <span class="footer2__ico">
+            <img src="img/ShieldCheck.svg" alt="" aria-hidden="true">
+          </span>
+          <div class="footer2__helpContent">
+            <div class="footer2__helpTitle" data-i18n="help_trans_title">Recommendation Transparency</div>
+            <div class="footer2__helpText" data-i18n="help_trans_text">Learn more about recommended content.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer2__lang" id="langWrap">
+        <div class="footer2__langLabel" data-i18n="lang_label">Language</div>
+
+        <button class="footer2__langBtn" type="button" id="langBtn" aria-expanded="false">
+          <span id="langCurrent">English</span>
+          <span class="footer2__chev" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="footer2__langList" id="langList" role="menu" aria-label="Language">
+          <button class="footer2__langItem is-active" type="button" data-lang="en" role="menuitem">English</button>
+          <button class="footer2__langItem" type="button" data-lang="uk" role="menuitem">Українська</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+  </main>
+
+  <script>
+    (() => {
+      const burgerBtn = document.getElementById("burgerBtn");
+      const topNav = document.getElementById("topNav");
+      if (!burgerBtn || !topNav) return;
+      burgerBtn.addEventListener("click", () => topNav.classList.toggle("open"));
+    })();
+
+    (() => {
+      const tabs = document.querySelectorAll(".tab");
+      tabs.forEach(t => t.addEventListener("click", () => {
+        tabs.forEach(x => x.classList.remove("is-active"));
+        t.classList.add("is-active");
+      }));
+    })();
+
+    (() => {
+      const toggle = document.getElementById("messagesToggle");
+      const icon = document.getElementById("toggleIcon");
+      const content = document.getElementById("messagesContent");
+      const card = document.getElementById("messagesCard");
+      if (!toggle || !icon || !content || !card) return;
+
+      let collapsed = false;
+
+      toggle.addEventListener("click", () => {
+        collapsed = !collapsed;
+
+        icon.style.transition = "transform .25s ease";
+        icon.style.transform = collapsed ? "rotate(180deg)" : "rotate(0deg)";
+
+        content.style.transition = "max-height .25s ease, opacity .2s ease, padding .25s ease";
+
+        if (collapsed) {
+          content.style.maxHeight = content.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            content.style.opacity = "0";
+            content.style.maxHeight = "0px";
+            content.style.paddingTop = "0px";
+            content.style.paddingBottom = "0px";
+            content.style.overflow = "hidden";
+          });
+          card.classList.add("is-collapsed");
+        } else {
+          card.classList.remove("is-collapsed");
+          content.style.overflow = "hidden";
+          content.style.opacity = "0";
+          content.style.maxHeight = "0px";
+          content.style.paddingTop = "";
+          content.style.paddingBottom = "";
+          requestAnimationFrame(() => {
+            content.style.opacity = "1";
+            content.style.maxHeight = "900px";
+          });
+          setTimeout(() => content.style.overflow = "visible", 260);
+        }
+      });
+    })();
+
+    (() => {
+      const mtabs = document.querySelectorAll(".messages-tab");
+      mtabs.forEach(t => t.addEventListener("click", () => {
+        mtabs.forEach(x => x.classList.remove("is-active"));
+        t.classList.add("is-active");
+      }));
+    })();
+  </script>
+</body>
+</html>
